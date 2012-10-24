@@ -1,15 +1,18 @@
+" using Pathogen
 call pathogen#infect()
-set nocompatible
-syntax on
-filetype plugin indent on
 
+" general vim settings
+set nocompatible
 set textwidth=78
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set relativenumber
 set cursorline
+syntax on
+filetype plugin indent on
 
+" Font selection for different plattforms
 if has("gui_running")
     if has("gui_gtk2")
     :set guifont=Luxi\ Mono\ 12
@@ -20,3 +23,9 @@ if has("gui_running")
     :set guifont=Source_Code_Pro_Semibold:h10
     endif
 endif
+
+" Haskell Mode
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="\"C:/Program Files (x86)/Mozilla Firefox/firefox.exe\""
+let g:ghc="\"C:/Program Files (x86)/Haskell Platform/2012.2.0.0/bin/ghc.exe\""
+let g:haddock_docdir="C:/Program\ Files\ (x86)/Haskell\ Platform/2012.2.0.0/doc/html/" 
