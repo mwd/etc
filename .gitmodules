@@ -1,3 +1,6 @@
 [submodule "win32/vim/vimfiles/bundle/histwin"]
 	path = win32/vim/vimfiles/bundle/histwin
 	url = https://github.com/chrisbra/histwin.vim.git
+[submodule ".\\win32\\vim\\vimfiles\\bundle\\snipmate"]
+	path = .\\win32\\vim\\vimfiles\\bundle\\snipmate
+	url = https://github.com/mwd/snipmate.vim.git
