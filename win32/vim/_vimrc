@@ -9,6 +9,9 @@ set shiftwidth=4
 set expandtab
 set relativenumber
 set cursorline
+set ruler
+" set spelllang=de
+" set spell
 syntax on
 filetype plugin indent on
 
@@ -29,3 +32,13 @@ au BufEnter *.hs compiler ghc
 let g:haddock_browser="\"C:/Program Files (x86)/Mozilla Firefox/firefox.exe\""
 let g:ghc="\"C:/Program Files (x86)/Haskell Platform/2012.2.0.0/bin/ghc.exe\""
 let g:haddock_docdir="C:/Program\ Files\ (x86)/Haskell\ Platform/2012.2.0.0/doc/html/" 
+
+" VimWiki
+let wiki_1 = {}
+let wiki_1.path          = '~\vimwiki\text'
+let wiki_1.path_html     = '~\vimwiki\html'
+let wiki_1.template_path = '~\vimwiki\templates'
+let wiki_1.template_default = 'default'
+let wiki_1.auto_export   = 1
+
+let g:vimwiki_list = [wiki_1]
