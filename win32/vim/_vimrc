@@ -1,8 +1,20 @@
 " using Pathogen
 call pathogen#infect()
+" No Compatible mode
+set nocompatible
+
+" Enable UTF-8 Support
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
 
 " general vim settings
-set nocompatible
 set textwidth=78
 set tabstop=4
 set shiftwidth=4
@@ -10,8 +22,8 @@ set expandtab
 set relativenumber
 set cursorline
 set ruler
-" set spelllang=de
-" set spell
+set spelllang=de
+set spell
 syntax on
 filetype plugin indent on
 
