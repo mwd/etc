@@ -24,6 +24,8 @@ set cursorline
 set ruler
 set spelllang=de
 set spell
+set ignorecase
+set smartcase
 syntax on
 filetype plugin indent on
 
