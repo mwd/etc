@@ -26,6 +26,10 @@ set spelllang=de
 set spell
 set ignorecase
 set smartcase
+set guioptions-=m " Remove the gui menu
+set guioptions-=T " Remove the gui toolbar
+set guioptions-=r " Remove right scrollbar
+set guioptions-=L " Remove the conditional left scrollbar
 syntax on
 filetype plugin indent on
 
