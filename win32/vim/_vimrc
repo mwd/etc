@@ -32,7 +32,7 @@ filetype plugin indent on
 " Font selection for different plattforms
 if has("gui_running")
     if has("gui_gtk2")
-    :set guifont=Luxi\ Mono\ 12
+    :set guifont="Source Code Pro Semi-Bold 10"
     elseif has("x11")
     " Also for GTK 1
     :set guifont=*-lucidatypewriter-medium-r-normal-*-*-180-*-*-m-*-*
