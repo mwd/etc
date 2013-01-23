@@ -1,7 +1,28 @@
-" using Pathogen
-call pathogen#infect()
 " No Compatible mode
 set nocompatible
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" initializing vundle                                                  "
+
+filetype off " 
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" It's required to let vundle manage vundle
+Bundle 'gmarik/vundle'
+
+" And here my custom bundles managed by vundle
+Bundle 'https://github.com/chrisbra/histwin.vim'
+Bundle 'https://github.com/msanders/snipmate.vim'
+Bundle 'https://github.com/scrooloose/nerdcommenter'
+Bundle 'https://github.com/scrooloose/nerdtree'
+Bundle 'https://github.com/lukerandall/haskellmode-vim'
+Bundle 'https://github.com/vim-ruby/vim-ruby'
+
+"                                                                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable UTF-8 Support
 if has("multi_byte")
@@ -15,7 +36,9 @@ if has("multi_byte")
 endif
 
 " general vim settings
-set textwidth=78
+syntax on
+filetype plugin indent on " I need this, and vundle does to ;)
+set textwidth=72
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -30,8 +53,6 @@ set guioptions-=m " Remove the gui menu
 set guioptions-=T " Remove the gui toolbar
 set guioptions-=r " Remove right scrollbar
 set guioptions-=L " Remove the conditional left scrollbar
-syntax on
-filetype plugin indent on
 
 " Font selection for different plattforms
 if has("gui_running")
@@ -46,10 +67,10 @@ if has("gui_running")
 endif
 
 " Haskell Mode
-au BufEnter *.hs compiler ghc
-let g:haddock_browser="\"C:/Program Files (x86)/Mozilla Firefox/firefox.exe\""
-let g:ghc="\"C:/Program Files (x86)/Haskell Platform/2012.2.0.0/bin/ghc.exe\""
-let g:haddock_docdir="C:/Program\ Files\ (x86)/Haskell\ Platform/2012.2.0.0/doc/html/" 
+"au BufEnter *.hs compiler ghc
+"let g:haddock_browser="\"C:/Program Files (x86)/Mozilla Firefox/firefox.exe\""
+"let g:ghc="\"C:/Program Files (x86)/Haskell Platform/2012.2.0.0/bin/ghc.exe\""
+"let g:haddock_docdir="C:/Program\ Files\ (x86)/Haskell\ Platform/2012.2.0.0/doc/html/" 
 
 " VimWiki
 let wiki_1 = {}
