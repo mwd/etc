@@ -20,6 +20,7 @@ Bundle 'https://github.com/scrooloose/nerdcommenter'
 Bundle 'https://github.com/scrooloose/nerdtree'
 Bundle 'https://github.com/lukerandall/haskellmode-vim'
 Bundle 'https://github.com/vim-ruby/vim-ruby'
+Bundle 'taglist.vim'
 
 "                                                                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
